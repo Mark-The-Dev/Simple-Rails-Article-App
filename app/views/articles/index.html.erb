@@ -1,5 +1,31 @@
 <h1>Articles</h1>
 
+<!--  Uses link_to with args for text and destination -->
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <%= link_to article.title, article %>
+    </li>
+  <% end %>
+</ul>
+
+
+<!--
+article path for convience, replace with link_to for auto article_path()
+
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <a href="<%= article_path(article) %>">
+        <%= article.title %>
+      </a>
+    </li>
+  <% end %>
+</ul>
+-->
+
+<!--
+Old school grab by url, replaced with _path(variable)
 <ul>
   <% @articles.each do |article| %>
     <li>
@@ -8,4 +34,6 @@
       </a>
     </li>
   <% end %>
-</ul>
+</ul> -->
+
+
