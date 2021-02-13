@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
   
-  # instantiates a new article, does not save
+  # instantiates a new article, does not save --  works as a new Article entry for new articles
   def new
     @article = Article.new
   end
