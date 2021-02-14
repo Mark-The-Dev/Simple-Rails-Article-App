@@ -12,6 +12,6 @@ class CommentsController < ApplicationController
   # sets the required fields for comment addition / editing
   private
     def comment_params
-      params.require(:comment).permit(:commenter, :body)
+      params.require(:comment).permit(:commenter, :body, :status)
     end
 end

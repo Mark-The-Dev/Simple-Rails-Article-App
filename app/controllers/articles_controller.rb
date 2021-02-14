@@ -53,6 +53,6 @@ class ArticlesController < ApplicationController
   # Requires article, and allows addition of title / body -- variable for article fields
   private
     def article_params
-      params.require(:article).permit(:title, :body)
+      params.require(:article).permit(:title, :body, :status)
     end
 end

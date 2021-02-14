@@ -1,4 +1,8 @@
 class Article < ApplicationRecord
+ 
+   ## sets valid statuses constant values. Made in concern
+   include Visible
+ 
   # sets one to many, can access with @article.comments
   has_many :comments
 
@@ -8,12 +12,5 @@ class Article < ApplicationRecord
   validates :body, presence: true, length: { minimum: 10 }
 
 
-  ## sets valid statuses constant values.
-  VALID_STATUSES = ['public', 'private', 'archived']
-
-  validates :status, inclusion: { in: VALID_STATUSES }
-
-  def archived?
-    status == 'archived'
-  end
+ 
 end
