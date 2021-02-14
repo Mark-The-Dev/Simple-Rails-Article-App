@@ -1,24 +1,11 @@
-# README
+[![Contributors][contributors-shield]][contributors-url]
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Simple Rails Article App
 
-Things you may want to cover:
+This is a simple Rails app to practice CRUD functionality.
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[contributors-shield]: https://img.shields.io/github/contributors/Simple-Rails-Article-App.svg?style=flat-square
+[contributors-url]: https://github.com/Mark-The-Dev/Simple-Rails-Article-App/graphs/contributors
