@@ -1,4 +1,8 @@
 class ArticlesController < ApplicationController
+  
+  # user authenticated for everything but index and show 
+  http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
+  
   # sets what index populates, sets articles variable to for each
   def index
     @articles = Article.all

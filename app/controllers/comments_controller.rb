@@ -1,5 +1,8 @@
 class CommentsController < ApplicationController
   
+  # restricts who can delete comments
+  http_basic_authenticate_with name: "dhh", password: "secret", only: :destroy
+
   # allows Article show to create a new comment.
   # @article.comments.create adds to comments array in article.
   # redirect as a form of rendering
