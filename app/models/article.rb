@@ -6,4 +6,14 @@ class Article < ApplicationRecord
   # Active Record automatically defines model attributes for every table column
   validates :title, presence: true
   validates :body, presence: true, length: { minimum: 10 }
+
+
+  ## sets valid statuses constant values.
+  VALID_STATUSES = ['public', 'private', 'archived']
+
+  validates :status, inclusion: { in: VALID_STATUSES }
+
+  def archived?
+    status == 'archived'
+  end
 end
