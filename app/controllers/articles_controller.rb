@@ -24,6 +24,22 @@ class ArticlesController < ApplicationController
     end
   end
 
+  # sets link to edit by the specific article.
+  def edit
+    @article = Article.find(params[:id])
+  end
+
+  # re-fetches the editable article and will patch if passes validations
+  def update
+    @article = Article.find(params[:id])
+
+    if @article.update(article_params)
+      redirect_to @article
+    else
+      render :edit
+    end
+  end
+
   # Requires article, and allows addition of title / body -- variable for article fields
   private
     def article_params
