@@ -9,6 +9,14 @@ class CommentsController < ApplicationController
     redirect_to article_path(@article)
   end
 
+  # allows a comment to be deleted
+  def destroy
+    @article = Article.find(params[:article_id])
+    @comment = @article.comments.find(params[:id])
+    @comment.destroy
+    redirect_to article_path(@article)
+  end
+
   # sets the required fields for comment addition / editing
   private
     def comment_params

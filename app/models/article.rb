@@ -4,7 +4,8 @@ class Article < ApplicationRecord
    include Visible
  
   # sets one to many, can access with @article.comments
-  has_many :comments
+  # allows for all comments to be deleted with article.
+  has_many :comments, dependent: :destroy
 
   # validates title exists, and body is atleast 10 chars
   # Active Record automatically defines model attributes for every table column
