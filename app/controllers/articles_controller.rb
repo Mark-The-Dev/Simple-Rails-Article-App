@@ -40,6 +40,16 @@ class ArticlesController < ApplicationController
     end
   end
 
+  # Delete method
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+
+    # could use root path as well!
+    redirect_to articles_path
+  end
+
+
   # Requires article, and allows addition of title / body -- variable for article fields
   private
     def article_params

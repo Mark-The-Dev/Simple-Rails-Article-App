@@ -4,6 +4,11 @@
 
 <ul>
   <li><%= link_to "Edit", edit_article_path(@article) %></li>
+  <li><%= link_to "Destroy", article_path(@article),
+    method: :delete,
+    # confirmation of delete, provided in rails apps.
+    data: { confirm: "Are you sure?" } %>
+  </li>
 </ul>
 
 <%= link_to "Back to Articles", "/" %>
